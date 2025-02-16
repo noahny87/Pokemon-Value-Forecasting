@@ -7,15 +7,18 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-import chromedriver_autoinstaller
+from webdriver_manager.firefox import GeckoDriverManager
 import time
 
 def geturl(pkcard):
     card_name = pkcard
-    options = FirefoxOptions()
-    options.add_argument('--headless=new')
-    driver = webdriver.Firefox(options=options)
+    firefoxOptions = Options()
+    firefoxOptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
+    driver = webdriver.Firefox(
+    options=firefoxOptions,
+    service=service,
+)
     
     try:
         driver.get("https://www.pricecharting.com/")
