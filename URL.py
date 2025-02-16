@@ -15,8 +15,6 @@ def geturl(pkcard):
     chromedriver_autoinstaller.install()
     options = webdriver.ChromeOptions()
     options.add_argument('--headless=new')
-    chromedriver_path = "/home/appuser/.cache/selenium/chromedriver/linux64/133.0.6943.98/chromedriver"
-    service = Service(chromedriver_path)
     driver = webdriver.Chrome(options=options)
     
     try:
