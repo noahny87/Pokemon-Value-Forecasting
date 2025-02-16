@@ -181,10 +181,10 @@ streamlit==1.30.0
 streamlit-on-Hover-tabs==1.0.1
 sympy==1.13.1
 tenacity==8.2.3
-tensorboard==2.18.0
-tensorboard-data-server==0.7.2
-tensorflow==2.18.0
-tensorflow_intel==2.18.0
+tensorboard
+tensorboard-data-server
+tensorflow
+tensorflow_intel
 termcolor==2.4.0
 tf_keras==2.18.0
 Theano-PyMC==1.1.2
