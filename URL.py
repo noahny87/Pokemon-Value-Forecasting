@@ -15,7 +15,7 @@ def geturl(pkcard):
     card_name = pkcard
     options = FirefoxOptions()
     options.add_argument('--headless=new')
-    driver = webdriver.Firefox(options=opts)
+    driver = webdriver.Firefox(options=options)
     
     try:
         driver.get("https://www.pricecharting.com/")
