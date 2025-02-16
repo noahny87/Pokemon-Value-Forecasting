@@ -6,18 +6,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.firefox import GeckoDriverManager
 import time
 
 def geturl(pkcard):
     card_name = pkcard
-    firefoxOptions = Options()
-    firefoxOptions.add_argument("--headless")
-    service = Service(GeckoDriverManager().install())
-    driver = webdriver.Firefox(
-    options=firefoxOptions,
-    service=service,
+    options = Options()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(
+    options=options
 )
     
     try:
