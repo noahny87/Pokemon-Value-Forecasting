@@ -5,12 +5,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_autoinstaller
 import time
 
 def geturl(pkcard):
     card_name = pkcard
+    chromedriver_autoinstaller.install()
     options = webdriver.ChromeOptions()
     options.add_argument('--headless=new')
+    chromedriver_path = "/home/appuser/.cache/selenium/chromedriver/linux64/133.0.6943.98/chromedriver"
+    service = Service(chromedriver_path)
     driver = webdriver.Chrome(options=options)
     
     try:
