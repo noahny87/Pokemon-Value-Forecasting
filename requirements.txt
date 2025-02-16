@@ -8,3 +8,5 @@ numpy==1.26.4
 matplotlib==3.8.2
 seaborn==0.13.1
 -e .
+webdriver-manager
+chromedriver-autoinstaller
