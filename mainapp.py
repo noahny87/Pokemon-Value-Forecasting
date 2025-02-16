@@ -1,7 +1,7 @@
 
 import pandas as pd 
 import streamlit as st
-from Pokemon_Price.Scripts import model, WebData, URL,chat
+import model, WebData, URL,chat
 import time
 
 st.title("Pokémon Card Value Forecasting🐉📈💵")
