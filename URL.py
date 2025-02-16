@@ -1,5 +1,6 @@
 #get url here 
 from selenium import webdriver
+from selenium.webdriver import FirefoxOptions
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -12,9 +13,9 @@ import time
 
 def geturl(pkcard):
     card_name = pkcard
-    options = webdriver.ChromeOptions()
+    options = FirefoxOptions()
     options.add_argument('--headless=new')
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Firefox(options=opts)
     
     try:
         driver.get("https://www.pricecharting.com/")
