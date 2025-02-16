@@ -12,7 +12,6 @@ import time
 
 def geturl(pkcard):
     card_name = pkcard
-    chromedriver_autoinstaller.install()
     options = webdriver.ChromeOptions()
     options.add_argument('--headless=new')
     driver = webdriver.Chrome(options=options)
